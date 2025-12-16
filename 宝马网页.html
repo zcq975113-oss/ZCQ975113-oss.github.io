@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW | 驾驶的乐趣</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://www.bmw.com/content/dam/bmw/common/all-models/3-series/sedan/2022/Highlights/bmw-3-series-sedan-gallery-image-01.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .models {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card .content {
+            padding: 20px;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+        footer {
+            background-color: #000;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            color: #fff;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+        .marquee div {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+            font-size: 16px;
+            padding-left: 100%;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BMW</h1>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">车型</a>
+        <a href="#">科技</a>
+        <a href="#">关于我们</a>
+    </nav>
+</header>
+
+<div class="marquee">
+    <div>欢迎来到BMW官方展示页面！最新车型、豪华体验、驾驶乐趣一应俱全！</div>
+</div>
+
+<section class="hero">
+    <div>
+        <h2>驾驶的乐趣</h2>
+        <p>纯粹操控 · 前沿科技 · 豪华体验</p>
+    </div>
+</section>
+
+<div class="container">
+    <h2 class="section-title">热门车型</h2>
+    <div class="models">
+        <div class="card">
+          <img src="tpmb/宝马三系.png" width="2307" height="1232" alt=""/>
+<div class="content">
+        <h3>BMW 3系</h3>
+                <p>运动与舒适的完美平衡，经典豪华运动轿车。</p>
+            </div>
+        </div>
+        <div class="card">
+          <img src="tpmb/宝马5系.png" width="2394" height="1336" alt=""/>
+<div class="content">
+        <h3>BMW 5系</h3>
+                <p>商务与科技融合，打造高端行政座驾体验。</p>
+            </div>
+        </div>
+        <div class="card">
+          <img src="tpmb/鸡车.png" width="3283" height="2051" alt=""/>
+<div class="content">
+        <h3>BMW X5</h3>
+                <p>强劲动力与豪华空间并存的中大型SUV。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">试驾预约表单</h2>
+    <form style="max-width:600px;margin:0 auto;background:#fff;padding:30px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <label>姓名：</label><br>
+        <input type="text" placeholder="请输入您的姓名" required style="width:100%;padding:10px;margin:10px 0;"><br>
+
+        <label>联系电话：</label><br>
+        <input type="tel" placeholder="请输入手机号" required style="width:100%;padding:10px;margin:10px 0;"><br>
+
+        <label>意向车型：</label><br>
+        <select style="width:100%;padding:10px;margin:10px 0;">
+            <option>BMW 3系</option>
+            <option>BMW 5系</option>
+            <option>BMW X5</option>
+        </select><br>
+
+        <label>备注：</label><br>
+        <textarea rows="4" placeholder="其他需求" style="width:100%;padding:10px;margin:10px 0;"></textarea><br>
+
+        <button type="submit" style="background:#000;color:#fff;padding:12px 25px;border:none;border-radius:5px;cursor:pointer;">提交预约</button>
+    </form>
+</div>
+
+<div class="container">
+    <h2 class="section-title">车型参数对比表</h2>
+    <table style="width:100%;border-collapse:collapse;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <tr style="background:#000;color:#fff;">
+            <th style="padding:12px;border:1px solid #ddd;">车型</th>
+            <th style="padding:12px;border:1px solid #ddd;">发动机</th>
+            <th style="padding:12px;border:1px solid #ddd;">最大功率</th>
+            <th style="padding:12px;border:1px solid #ddd;">参考价格</th>
+        </tr>
+        <tr>
+            <td style="padding:12px;border:1px solid #ddd;">BMW 3系</td>
+            <td style="padding:12px;border:1px solid #ddd;">2.0T</td>
+            <td style="padding:12px;border:1px solid #ddd;">258 马力</td>
+            <td style="padding:12px;border:1px solid #ddd;">¥30万起</td>
+        </tr>
+        <tr style="background:#f9f9f9;">
+            <td style="padding:12px;border:1px solid #ddd;">BMW 5系</td>
+            <td style="padding:12px;border:1px solid #ddd;">2.0T / 3.0T</td>
+            <td style="padding:12px;border:1px solid #ddd;">333 马力</td>
+            <td style="padding:12px;border:1px solid #ddd;">¥43万起</td>
+        </tr>
+        <tr>
+            <td style="padding:12px;border:1px solid #ddd;">BMW X5</td>
+            <td style="padding:12px;border:1px solid #ddd;">3.0T</td>
+            <td style="padding:12px;border:1px solid #ddd;">340 马力</td>
+            <td style="padding:12px;border:1px solid #ddd;">¥60万起</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+    © 2025 BMW AG | 本页面仅用于HTML学习与演示
+</footer>
+
+</body>
+</html>
